@@ -1,0 +1,21 @@
+<%- include("partials/header"); %>
+
+<%  for(var k in blogs) { %>
+    <div class="">
+        <h3><%= blogs[k].title %> Hola</h3>
+        
+        <p><%= blogs[k].talkusabouttherecipe %></p>
+      <div >
+        <ul>
+            <%  for(var x in blogs[k].ingredients) { %>
+                <li>blogs[k].ingredients</li>
+            <% } %>
+            </ul>
+        <div class="texto-galeria"><%= blogs[k].preparation %></div>
+      </div>
+    </div>
+<% } %>
+</div>
+
+
+<%- include("partials/footer"); %>

@@ -1,0 +1,41 @@
+<%- include("partials/header"); %>
+
+    <div class="noticia2">
+    <h5><b> Submit Your Recipe:</b></h5>
+    <aside> 
+        <hr size="4%">
+        <div>
+            <form action ="/publicar" method="POST">
+            <div class="form-group">
+                <h4>Nombre de la Receta</h4>
+                <input type="text" class="form-control" id="formGroupExampleInput" name="recipeName">
+              </div>
+              <div class="form-group">
+                <h4>Acerca de la Receta</h4>
+                <input type="text" class="form-control" id="formGroupExampleInput2" name="talkusabouttherecipe">
+              </div>
+              <div class="form-group">
+                  <h4>Ingredientes</h4>
+                  <%- include("partials/renderlista", {lista: ingredients, name: "/publicar/Ingredientes"}); %>
+                  <form action ="/publicar/Ingredientes" method="POST">
+                    <!--Aqui hagan un forma, para que reciba un ingrediente y lo mande-->
+                    </form>
+              </div>
+              <div class="form-group">
+                <h4>Preparacion</h4>
+                  <%- include("partials/renderlista", {lista: steps, name: "/publicar/Preparacion"}); %>
+                <form action ="/publicar/Preparacion" method="POST">
+                  <!--Aqui hagan un forma, para que reciba un ingrediente y lo mande-->
+                  </form>
+                  
+              </div>
+            </br>
+            <button class="btn btn-outline-secondary boton2 boton-forms" type="submit" id="iniciarsesion" >Submit</button>
+            <button class="btn btn-outline-secondary boton2 boton-forms" type="reset" id="iniciarsesion" >Clear</button>
+            </form>
+    <div class="reset"></div>
+  </div>
+ 
+
+
+  <%- include("partials/footer"); %>
