@@ -1,6 +1,10 @@
 
         <ul>
             <%  for(var x in lista) { %>
-                <li>lista[x] <a href="<%=name%>/<%=x%>"><img ="/images/cruz.jpg"></a></li>
+                <li> <%= lista[x] %>
+                    <form action="<%=name%>" method="post">
+                        <input type="submit"  name="x" value="<%= x %>" />
+                    </form>
+                </li>
             <% } %>
-            </ul>
+        </ul>

@@ -5,34 +5,41 @@
     <aside> 
         <hr size="4%">
         <div>
-            <form action ="/publicar" method="POST">
+            <form action ="/publicar" method="POST" id="recetas">
             <div class="form-group">
                 <h4>Nombre de la Receta</h4>
                 <input type="text" class="form-control" id="formGroupExampleInput" name="recipeName">
-              </div>
-              <div class="form-group">
-                <h4>Acerca de la Receta</h4>
-                <input type="text" class="form-control" id="formGroupExampleInput2" name="talkusabouttherecipe">
-              </div>
+            </div>
+                <div class="form-group">
+                  <h4>Acerca de la Receta</h4>
+                  <input type="text" class="form-control" id="formGroupExampleInput2" name="talkusabouttherecipe">
+                </div>
+              </br>
+            </form>
               <div class="form-group">
                   <h4>Ingredientes</h4>
-                  <%- include("partials/renderlista", {lista: ingredients, name: "/publicar/Ingredientes"}); %>
+                  <%- include("partials/renderslista", {lista: ingredients, name: "/publicar/dIngredientes"}); %>
                   <form action ="/publicar/Ingredientes" method="POST">
                     <!--Aqui hagan un forma, para que reciba un ingrediente y lo mande-->
-                    </form>
+                    <input type="text" class="form-control" id="formGroupExampleInput" name="ingrediente">
+                    <button class="btn btn-outline-secondary boton-forms" type="submit" id="agregar" >Agregar Ingrediente</button>
+                  </form>
               </div>
               <div class="form-group">
                 <h4>Preparacion</h4>
-                  <%- include("partials/renderlista", {lista: steps, name: "/publicar/Preparacion"}); %>
+                  <%- include("partials/renderslista", {lista: steps, name: "/publicar/dPreparacion"}); %>
                 <form action ="/publicar/Preparacion" method="POST">
                   <!--Aqui hagan un forma, para que reciba un ingrediente y lo mande-->
-                  </form>
+                    <input type="text" class="form-control" id="formGroupExampleInput" name="paso">
+                    <button class="btn btn-outline-secondary boton-forms" type="submit" id="agregar" >Agregar Paso</button>
+
+                </form>
                   
               </div>
-            </br>
-            <button class="btn btn-outline-secondary boton2 boton-forms" type="submit" id="iniciarsesion" >Submit</button>
-            <button class="btn btn-outline-secondary boton2 boton-forms" type="reset" id="iniciarsesion" >Clear</button>
-            </form>
+              <button class="btn btn-outline-secondary boton2 boton-forms" type="submit" id="iniciarsesion" form ="recetas">Submit</button>
+              <button class="btn btn-outline-secondary boton2 boton-forms" type="reset" id="iniciarsesion" form ="recetas">Clear</button>
+              
+            
     <div class="reset"></div>
   </div>
  

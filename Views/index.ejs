@@ -1,20 +1,97 @@
 <%- include("partials/header"); %>
 
-<%  for(var k in blogs) { %>
-    <div class="">
-        <h3><%= blogs[k].title %> Hola</h3>
+<nav class="navbar2 navbar-expand-lg">   
+  <h4 align="center"><b> We hope you enjoy it. We are happy to have you here!</b></h1></b>
+      <div class="container" id ="galeriam1">
+        <div class="row">
+          <div class="col-sm imgcont">
+            <a href="/">
+            <img  class="d-block imggal" src="/images/11.jpg"  ></a>
+            <div class="middle">
+              <div class="texto-galeria">Spiced Lamb</div>
+            </div>
+          </div>
+          <div class="col-sm imgcont">
+            <a href="/">
+            <img class="d-block imggal" src="/images/12.jpg"  ></a>
+            <div class="middle">
+              <div class="texto-galeria">Linguini</div>
+            </div>
+          </div>
+          <div class="col-sm imgcont">
+              <a href="/">
+              <img class="d-block imggal" src="/images/13.jpg"  ></a>
+              <div class="middle">
+                <div class="texto-galeria">Paella</div>
+              </div>
+            </div>
+          <div class="col-sm imgcont">
+              <a href="/">
+              <img class="d-block imggal" src="/images/14.jpg"  ></a>
+              <div class="middle">
+                <div class="texto-galeria">Quinoa Salas</div>
+              </div>
+            </div>
+          <div class="col-sm imgcont">
+              <a href="/">
+              <img class="d-block imggal" src="/images/15.jpg"  ></a>
+              <div class="middle">
+                <div class="texto-galeria">Vegetarian Lasagna</div>
+              </div>
+            </div>
+          <div class="col-sm imgcont">
+            <a href="/">
+            <img class="d-block imggal" src="/images/16.jpg"></a>
+            <div class="middle">
+              <div class="texto-galeria">Tofu Spring Rolls</div>
+            </div>
+          </div>
+          <div class="w-100"></div>
+        </div>
+      </div>
+</nav>
+<h2>Recetas Previas:</h2>
+<div class="container">
+  <%  for(var k in blogs) { %>
+    <div class="row">
+      <h3><%= blogs[k].title %></h3>
         
-        <p><%= blogs[k].talkusabouttherecipe %></p>
-      <div >
+    <div class="row">  
+      
+      <div class="col">
+        <p  id="recomendaciones"><%= blogs[k].talkusabouttherecipe %></p>
+        
+      </div>
+      
+        </div>  
+    <div class="row">
+        
+      <div class="col">
+        <h4>Ingredients</h4>
         <ul>
             <%  for(var x in blogs[k].ingredients) { %>
-                <li>blogs[k].ingredients</li>
+                <li><%= blogs[k].ingredients%></li>
             <% } %>
             </ul>
-        <div class="texto-galeria"><%= blogs[k].preparation %></div>
+        
+      </div>
+        </div>
+        
+    <div class="row">
+      
+      <div class="col">
+        <h4>How to prepare</h4>
+        <ol>
+            <%  for(var x in blogs[k].preparation) { %>
+                <li><%= blogs[k].preparation%></li>
+            <% } %>
+            </ol>
+        
       </div>
     </div>
-<% } %>
+    </div>
+  <% } %>
+</div>
 </div>
 
 

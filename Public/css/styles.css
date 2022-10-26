@@ -23,7 +23,6 @@ body{
     position: relative;
 }
 
-
 .nav-link{
     color: white;
     margin-top: 10px;
@@ -153,4 +152,29 @@ h5{
 
 .boton-forms{
     display: inline-block;
+}
+
+#agregar{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    border: white 2px solid;
+    transition: transform 0.3s ease;
+    display: block;
+    width: 150px;
+}
+
+#agregar:hover{
+    color: black;
+    background-color:darkkhaki;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#recomendaciones{
+    font-weight: lighter;
+    color: grey;
+    background-color: wheat;
 }
